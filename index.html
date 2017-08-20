@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./bundle.js"></script>
+	<script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+	<script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+	<!-- <script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script> -->
+</head>
+<body>
+
+    <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+<!-- 		  <a-assets>
+		    <a-asset-item id="fox" src="./model/mimikyu/scene.gltf"></a-asset-item>
+		  </a-assets> -->
+<!-- 		<a-assets>
+		    <a-asset-item id="tree-obj" src="./model/estante/estante.obj"></a-asset-item>
+		</a-assets>
+		<a-entity obj-model="obj: #tree-obj" scale="0.4 0.4 0.4"></a-entity> -->
+<!-- 		<a-assets>
+		    <a-asset-item id="tree-obj" src="./model/easteregg/easteregg.ply"></a-asset-item>
+		</a-assets>
+		<a-entity obj-model="obj: #tree-obj" scale="0.4 0.4 0.4"></a-entity> -->
+
+		<a-assets>
+		    <a-asset-item id="tree-obj" src="./model/shit/RhinoExporter.obj"></a-asset-item>
+		    <a-asset-item id="tree-mtl" src="./model/shit/RhinoExporter.mtl"></a-asset-item>
+		</a-assets>
+<!-- 
+		<a-assets>
+		    <a-asset-item id="frog-obj" src="./model/frog/source/Poliwhirl/Polywhirl.obj"></a-asset-item>
+		    <a-asset-item id="frog-tga" src="./model/frog/source/Poliwhirl/PolyWhirl_D.tga"></a-asset-item>
+		</a-assets> -->
+		<!-- <a-entity gltf-model-next="#fox"></a-entity> -->
+		<!-- <a-camera id="camera" fov="20" near="0.1" wasd-controls-enabled="true"></a-camera> -->
+		<a-sphere position="0 -1 -5" radius="1" src="https://www.toptal.com/designers/subtlepatterns/patterns/retina_wood.png"></a-sphere>
+		<a-entity cursor-listener obj-model="obj: #tree-obj; mtl: #tree-mtl" scale="8 8 3"></a-entity>
+		<a-entity camera look-controls>
+		    <a-cursor id="cursor" 
+		        animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+		        animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+		        event-set__1="_event: mouseenter; color: #0092d8" 
+		        event-set__2="_event: mouseleave; color: black"></a-cursor>
+		</a-entity>
+		<a-sky src="https://c1.staticflickr.com/8/7376/16218590470_468084c950_h.jpg"></a-sky>
+    </a-scene>
+</body>
+</html>
